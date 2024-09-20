@@ -1,0 +1,455 @@
+/* Reset de margens e padding padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo Geral */
+body, html {
+    background-image: url('fotos/marrom2.jpg');
+    font-family: 'Lora', serif;
+    color: #333;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* Fundo animado */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #e0dcd0, #f5f5f5);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Cabeçalho fixo */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(75, 63, 68, 0.9); /* Marrom escuro com transparência */
+    padding: 20px;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Estilização da lista de navegação */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #aab2c1;
+}
+
+/* Seção Home */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+.home-photo {
+    flex: 0 0 auto;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    border: 8px solid #6c4f4f;
+    overflow: hidden;
+    opacity: 0;
+    animation: photoSlideIn 1s ease-out forwards, float 6s ease-in-out infinite;
+}
+
+.home-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-text {
+    flex: 0 0 50%;
+    padding-left: 40px;
+    opacity: 0;
+    animation: textSlideIn 1s ease-out forwards;
+}
+
+.home-text h1 {
+    font-size: 3rem;
+    color: #a79ea1;
+    margin-bottom: 10px;
+}
+
+.home-text p {
+    font-size: 1.2rem;
+    color: #b6b4b4;
+    line-height: 1.6;
+}
+
+@keyframes photoSlideIn {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes textSlideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Seções gerais */
+.section {
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilo da Seção Sobre Mim */
+.about-section {
+    background-color: rgba(244, 241, 235, 0.8);
+    text-align: center;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: #4b3f44;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    color: #6b5b5a;
+    line-height: 1.6;
+}
+
+/* Seção Projetos */
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: rgba(244, 241, 235, 0.8);
+    padding: 100px 20px;
+}
+
+.projects-section h2 {
+    width: 100%;
+    font-size: 2.5rem;
+    color: #4b3f44;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    min-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #6b5b5a;
+}
+
+/* Botões dos Projetos */
+.github-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #6c4f4f; /* Cor Primária */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.github-btn:hover {
+    background-color: #aab2c1; /* Cor de Hover */
+    transform: translateY(-2px);
+}
+
+.github-btn:focus {
+    outline: none;
+}
+
+
+/* Seção Ferramentas */
+.ferramentas-section {
+    background-color: rgba(245, 245, 245, 0.8);
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.ferramentas-section h2 {
+    font-size: 2.5rem;
+    color: #4b3f44;
+    margin-bottom: 40px;
+}
+
+.ferramentas-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ferramentas-marquee {
+    display: flex;
+    width: 200%;
+    animation: marquee 22s linear infinite;
+}
+
+.ferramentas-content {
+    display: flex;
+    width: 100%;
+}
+
+.ferramenta-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.ferramenta-item i {
+    font-size: 3rem;
+    color: #6c4f4f;
+    border-radius: 50%;
+    border: 4px solid #6c4f4f;
+    padding: 10px;
+    background-color: #e0e0e0;
+}
+
+.ferramenta-item p {
+    font-size: 1.2rem;
+    color: #4b3f44;
+    margin-top: 10px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Seção Contato */
+.contact-section {
+    padding: 100px 20px;
+    background-color: rgba(244, 241, 235, 0.8);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.contact-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #4b3f44;
+}
+
+.contact-info {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.email {
+    font-weight: bold;
+    color: #6b5b5a;
+}
+
+.icon-link {
+    margin: 0 10px;
+    font-size: 2rem;
+    color: #6b5b5a;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #aab2c1;
+}
+
+.contact-photo {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 8px solid #6c4f4f;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-photo {
+        order: -1;
+        margin-bottom: 30px;
+    }
+}
+
+/* Animação suave para a foto de contato */
+@keyframes contactPhotoAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.contact-photo {
+    animation: contactPhotoAppear 1s ease-out forwards;
+}
+
+/* Habilidades */
+
+.skills-section {
+    background-color: #f9f9f9; /* Paleta de cor clara */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    background: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-name {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.skill-meter {
+    background: #e0e0e0; /* Paleta de cor clara para o fundo */
+    border-radius: 5px;
+    height: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-fill {
+    background: #a2c7a5; /* Cor verde sutil para a parte preenchida */
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
