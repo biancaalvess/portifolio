@@ -1,4 +1,4 @@
-# Leia-me
+# Portifólio
 
 ## Descrição do Projeto
 Este é um portfólio online que apresenta minhas habilidades e projetos em desenvolvimento.
@@ -9,7 +9,7 @@ O portfólio foi desenvolvido utilizando HTML, CSS e JavaScript, com um design r
 ## Acesso ao Portfólio
 Você pode acessar o portfólio online em: [biancalvess.netlify.app](https://biancalvess.netlify.app/)
 
-# Read Me
+# Portfólio
 
 ## Project Description
 This is an online portfolio showcasing my skills and ongoing projects.
