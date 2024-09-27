@@ -402,6 +402,7 @@ header {
     text-align: center;
 }
 
+
 .skills-section h2 {
     font-size: 2.5rem;
     color: #333;
@@ -410,7 +411,7 @@ header {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
@@ -418,38 +419,51 @@ header {
 
 .skill-item {
     background: #fff;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease; 
+}
+
+.skill-item:hover {
+    transform: scale(1.05); 
+}
+
+.skill-icon {
+    font-size: 3rem; /* Tamanho do ícone */
+    color: #6c4f4f; /* Cor dos ícones */
+    margin-bottom: 10px;
 }
 
 .skill-name {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #555;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
 }
 
-.skill-meter {
-    background: #e0e0e0; /* Paleta de cor clara para o fundo */
-    border-radius: 5px;
-    height: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.skill-fill {
-    background: #a2c7a5; /* Cor verde sutil para a parte preenchida */
-    height: 100%;
-    border-radius: 5px 0 0 5px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: width 0.3s ease-in-out;
-}
-
-/* Responsivo */
+/* Responsive */
 @media (max-width: 768px) {
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
+}
+
+/* Estilo do Ícone Flutuante */
+.floating-icon {
+    position: fixed;
+    top: 15px;
+    right: 15px; 
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border: 2px solid #ddd; 
+    opacity: 0.9; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+.floating-icon:hover {
+    opacity: 1; 
+    cursor: pointer;
 }
