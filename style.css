@@ -251,6 +251,7 @@ header {
     padding: 50px 0;
     text-align: center;
     overflow: hidden;
+    position: relative;
 }
 
 .ferramentas-section h2 {
@@ -260,8 +261,8 @@ header {
 }
 
 .ferramentas-wrapper {
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    animation: slide 20s linear infinite;
 }
 
 .ferramentas-marquee {
@@ -303,6 +304,7 @@ header {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
 
 /* Seção Contato */
 .contact-section {
