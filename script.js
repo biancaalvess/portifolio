@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const projectsContainer = document.getElementById('projects-container');
     const username = 'biancaalvess';
-    const token = 'seu_token_aqui'; // Coloque seu token pessoal aqui
+    const token = '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'; // Substitua pelo seu token pessoal
 
-    fetch(`https://api.github.com/users/${biancaalvess}/repos`, {
+    fetch(`https://api.github.com/users/${username}/repos`, {
         headers: {
             'Authorization': `token ${token}`
         }
