@@ -8,14 +8,17 @@
 /* Estilo Geral */
 body, html {
     background-image: url('fotos/marrom2.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center center; 
     font-family: 'Lora', serif;
     color: #333;
     height: 100%;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
-    
 }
+
 
 /* Fundo animado */
 .background {
