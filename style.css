@@ -307,7 +307,6 @@ header {
     100% { transform: translateX(-50%); }
 }
 
-/* Seção Contato */
 .contact-section {
     padding: 100px 20px;
     background-color: rgba(244, 241, 235, 0.8);
@@ -369,7 +368,6 @@ header {
     object-fit: cover;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .contact-section {
         flex-direction: column;
@@ -381,7 +379,6 @@ header {
     }
 }
 
-/* Animação suave para a foto de contato */
 @keyframes contactPhotoAppear {
     from {
         opacity: 0;
@@ -397,10 +394,9 @@ header {
     animation: contactPhotoAppear 1s ease-out forwards;
 }
 
-/* Habilidades */
 
 .skills-section {
-    background-color: #f9f9f9; /* Paleta de cor clara */
+    background-color: #f9f9f9; 
     padding: 60px 20px;
     text-align: center;
 }
@@ -433,8 +429,8 @@ header {
 }
 
 .skill-icon {
-    font-size: 3rem; /* Tamanho do ícone */
-    color: #6c4f4f; /* Cor dos ícones */
+    font-size: 3rem; 
+    color: #6c4f4f; 
     margin-bottom: 10px;
 }
 
@@ -444,14 +440,12 @@ header {
     color: #333;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
 
-/* Estilo do Ícone Flutuante */
 .floating-icon {
     position: fixed;
     top: 15px;
@@ -469,3 +463,13 @@ header {
     opacity: 1; 
     cursor: pointer;
 }
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
